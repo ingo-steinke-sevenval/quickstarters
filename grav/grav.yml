@@ -1,0 +1,13 @@
+version: "v1"
+project: "grav"
+services:
+  frontend:
+    web:
+      image: "gulinux/grav-docker:apache2"
+      instances: 1
+      mem: 512
+      domain: "$URI"
+      port: 8080
+      volumes:
+        - container_path: "/data"
+          size: "8GB"
